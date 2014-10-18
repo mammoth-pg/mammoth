@@ -1,7 +1,4 @@
-require 'bundler'
-
-Bundler.setup
-
+require 'bundler/setup'
 require 'lotus'
 
 module Mammoth
@@ -17,3 +14,5 @@ module Mammoth
     end
   end
 end
+
+::Mammoth::Application.configuration.load_paths << 'app/models'
