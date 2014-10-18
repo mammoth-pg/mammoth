@@ -1,5 +1,4 @@
 require 'bundler/setup'
-
 require 'lotus'
 
 module Mammoth
@@ -18,3 +17,7 @@ end
 
 # FIXME(arp): hopefully Lotus has a better way of loading files...
 $LOAD_PATH.unshift(::Mammoth::Application.configuration.root.join('app', 'models'))
+# FIXME(vessi): hopefully Lotus has a better way of passing default engine
+class Lotus::Commands::Console
+  def default_engine; ['pry', 'Pry']; end
+end
