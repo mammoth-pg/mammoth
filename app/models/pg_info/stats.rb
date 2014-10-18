@@ -35,12 +35,16 @@ module PgInfo
       @connection.fetch(query).to_a
     end
 
-    def sql_option(provided_option, default = '')
-      if provided_option
-        @connection.literal(provided_option)
+    def sql_option(provided_options, default = '')
+      sanitized_options = if provided_options
+        Array.wrap(provided_options).map { |option|
+          @connection.literal(option)
+        }
       else
-        default
+        Array.wrap(default)
       end
+
+      return sanitized_options.join(", ")
     end
   end
 end

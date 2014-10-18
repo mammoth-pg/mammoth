@@ -7,6 +7,8 @@ gem 'lotusrb', github: 'lotus/lotus'
 gem 'thor'
 gem 'thin'
 
+gem 'activesupport'
+
 gem 'pg'
 gem 'sequel'
 

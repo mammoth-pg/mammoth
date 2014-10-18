@@ -1,5 +1,6 @@
 require 'bundler/setup'
 require 'lotus'
+require 'active_support/all'
 
 module Mammoth
   class Application < Lotus::Application
