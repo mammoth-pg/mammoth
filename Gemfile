@@ -19,5 +19,5 @@ end
 group :development, :test do
   gem 'rspec'
   gem 'pry'
-  gem 'pry-nav'
+  gem 'pry-byebug'
 end
