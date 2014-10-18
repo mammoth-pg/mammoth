@@ -1,0 +1,31 @@
+body {
+  background-color: #4f5a6b; }
+
+header {
+  height: 300px;
+  padding: 20px 10px;
+  background: #2e333b url(/img/main-bkg.png) bottom left repeat-x;
+  background-size: 500px 87px; }
+
+h1 img {
+  width: 105px;
+  height: 26px; }
+
+h1, h2, h3 {
+  font-weight: normal;
+  text-align: center; }
+
+h2 {
+  font-size: 36px;
+  color: #54ab7e; }
+
+h3 {
+  width: 500px;
+  color: #738baf;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center; }
+
+section p {
+  margin: 30px 10%;
+  color: #a3b7d6; }
