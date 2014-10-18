@@ -6,6 +6,11 @@ module PgInfo
     TEST_CONNECTION_STRING_HEROKU = 'postgres://bunny:Kr0l3ggX@bunnybase.ch3ujgvbn987.us-east-1.rds.amazonaws.com:5432/your_bunny_wrote'
     TEST_CONNECTION_STRING_LOCAL  = 'postgres://127.0.0.1:5432/your_bunny_wrote'
 
+    COMMON_CONNECTION_OPTIONS = {
+      :logger => $logger,
+      :sql_log_level => :debug
+    }.freeze
+
     attr_reader :connection # for debugging
 
     def initialize(connection)
@@ -17,7 +22,7 @@ module PgInfo
     end
 
     def self.connect(connection_string)
-      connection = Sequel.connect(connection_string)
+      connection = Sequel.connect(connection_string, COMMON_CONNECTION_OPTIONS)
       return self.new(connection)
     end
 

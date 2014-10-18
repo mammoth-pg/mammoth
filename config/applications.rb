@@ -2,6 +2,10 @@ require 'bundler/setup'
 require 'lotus'
 require 'active_support/all'
 
+# Shit just got real
+require 'logger'
+$logger = Logger.new($stdout)
+
 module Mammoth
   class Application < Lotus::Application
     #ROOT = Pathname.new(File.expand_path(__dir__, '../..')).dirname.realpath
