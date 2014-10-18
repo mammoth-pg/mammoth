@@ -37,10 +37,14 @@ h3 {
 	text-align: center;
 }
 
-section p {
-	margin: 30px 10%;
+section {
+	padding-top: 20px;
 
-	color: #a3b7d6;
+	p {
+		margin: 30px 10%;
+
+		color: #aebcd4;
+	}
 }
 
 button {
@@ -57,6 +61,12 @@ button {
 		weight: bold;
 	}
 
-	background-color: #36b272;
+	background-image: linear-gradient(#a0b8db, #869cbd);
 	color: #4f5a6b;
+
+	text-shadow: #b2c9eb 0 1px;
+
+	&:hover {
+		background-image: linear-gradient(#bbd0f0, #869cbd);
+	}
 }

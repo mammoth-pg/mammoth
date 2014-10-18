@@ -26,9 +26,11 @@ h3 {
   font-size: 18px;
   text-align: center; }
 
-section p {
-  margin: 30px 10%;
-  color: #a3b7d6; }
+section {
+  padding-top: 20px; }
+  section p {
+    margin: 30px 10%;
+    color: #aebcd4; }
 
 button {
   display: block;
@@ -38,5 +40,10 @@ button {
   border-radius: 4px;
   font-size: 20px;
   font-weight: bold;
-  background-color: #36b272;
-  color: #4f5a6b; }
+  background-image: -webkit-linear-gradient(#a0b8db, #869cbd);
+  background-image: linear-gradient(#a0b8db, #869cbd);
+  color: #4f5a6b;
+  text-shadow: #b2c9eb 0 1px; }
+  button:hover {
+    background-image: -webkit-linear-gradient(#bbd0f0, #869cbd);
+    background-image: linear-gradient(#bbd0f0, #869cbd); }
