@@ -1,5 +1,4 @@
 require 'bundler/setup'
-
 require 'lotus'
 
 module Mammoth
@@ -16,5 +15,4 @@ module Mammoth
   end
 end
 
-# FIXME(arp): hopefully Lotus has a better way of loading files...
-$LOAD_PATH.unshift(::Mammoth::Application.configuration.root.join('app', 'models'))
+::Mammoth::Application.configuration.load_paths << 'app/models'
