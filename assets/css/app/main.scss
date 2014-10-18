@@ -4,30 +4,4 @@ body {
 	background-color: #e6e6e6;
 }
 
-header[role="main"] {
-  background-color: #2e333b;
-
-	padding: 10px;
-
-	ul {
-		margin: 0;
-		padding: 0;
-
-		list-style: none;
-
-		a {
-			color: #36b272;
-			text-decoration: none;
-		}
-
-		li {
-			display: inline-block;
-
-			margin-right: 20px;
-		}
-
-		.fa {
-			font-size: 24px;
-		}
-	}
-}
+@import "app/layout/header";

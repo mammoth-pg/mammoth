@@ -1595,10 +1595,13 @@ header[role="main"] {
   header[role="main"] ul {
     margin: 0;
     padding: 0;
-    list-style: none; }
+    list-style: none;
+    text-align: center; }
     header[role="main"] ul a {
       color: #36b272;
       text-decoration: none; }
+      header[role="main"] ul a:hover {
+        color: #cf330c; }
     header[role="main"] ul li {
       display: inline-block;
       margin-right: 20px; }
