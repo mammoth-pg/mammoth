@@ -1,1 +1,1 @@
-web: bundle exec shotgun --server=thin --port=6000 config.ru
+web: bundle exec lotus server --server=thin --port=$PORT
