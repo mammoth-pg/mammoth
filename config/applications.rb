@@ -4,8 +4,6 @@ require 'active_support/all'
 
 module Mammoth
   class Application < Lotus::Application
-    #ROOT = Pathname.new(File.expand_path(__dir__, '../..')).dirname.realpath
-
     configure do
       load_paths << 'app'
 
@@ -22,7 +20,8 @@ $LOAD_PATH.unshift(::Mammoth::Application.configuration.root.join('app', 'models
 $LOAD_PATH.unshift(::Mammoth::Application.configuration.root.join('app', 'layouts'))
 
 # FIXME(vessi): hopefully Lotus has a better way of passing default engine
-class Lotus::Commands::Console
-  def default_engine; ['pry', 'Pry']; end
+if defined? Lotus::Commands
+  class Lotus::Commands::Console
+    def default_engine; ['pry', 'Pry']; end
+  end
 end
-
