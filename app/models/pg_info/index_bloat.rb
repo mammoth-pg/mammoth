@@ -1,3 +1,5 @@
+require 'pg_info/stats'
+
 module PgInfo
   class IndexBloat < ::PgInfo::Stats
     def get(options = {})
