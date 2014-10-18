@@ -18,8 +18,14 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    byebug (3.5.1)
+      columnize (~> 0.8)
+      debugger-linecache (~> 1.2)
+      slop (~> 3.6)
     coderay (1.1.0)
+    columnize (0.8.9)
     daemons (1.1.9)
+    debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
@@ -50,8 +56,9 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    pry-nav (0.2.4)
-      pry (>= 0.9.10, < 0.11.0)
+    pry-byebug (2.0.0)
+      byebug (~> 3.4)
+      pry (~> 0.10)
     rack (1.5.2)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
@@ -90,7 +97,7 @@ DEPENDENCIES
   lotusrb!
   pg
   pry
-  pry-nav
+  pry-byebug
   rspec
   sequel
   shotgun

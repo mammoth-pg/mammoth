@@ -38,11 +38,14 @@ h3 {
 }
 
 section {
+	width: 800px;
+
+	margin: 30px auto;
+
 	padding-top: 20px;
 
-	p {
-		margin: 30px 10%;
-
+	p, ul {
+		text-indent: 1em;
 		color: #aebcd4;
 	}
 }
@@ -50,7 +53,7 @@ section {
 button {
 	display: block;
 
-	margin: 0 auto;
+	margin: 0 auto 30px;
 	padding: 10px 40px;
 
 	border: none;
@@ -64,7 +67,7 @@ button {
 	background-image: linear-gradient(#a0b8db, #869cbd);
 	color: #4f5a6b;
 
-	text-shadow: #b2c9eb 0 1px;
+	text-shadow: #afc4e3 0 1px;
 
 	&:hover {
 		background-image: linear-gradient(#bbd0f0, #869cbd);

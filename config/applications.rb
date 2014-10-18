@@ -2,6 +2,10 @@ require 'bundler/setup'
 require 'lotus'
 require 'active_support/all'
 
+# Shit just got real
+require 'logger'
+$logger = Logger.new($stdout)
+
 module Mammoth
   class Application < Lotus::Application
     configure do
@@ -18,10 +22,3 @@ end
 # FIXME(arp): hopefully Lotus has a better way of loading files...
 $LOAD_PATH.unshift(::Mammoth::Application.configuration.root.join('app', 'models'))
 $LOAD_PATH.unshift(::Mammoth::Application.configuration.root.join('app', 'layouts'))
-
-# FIXME(vessi): hopefully Lotus has a better way of passing default engine
-if defined? Lotus::Commands
-  class Lotus::Commands::Console
-    def default_engine; ['pry', 'Pry']; end
-  end
-end
