@@ -1,5 +1,5 @@
 module Mammoth::Views::Home
   class Index
-    include Lotus::View
+    include Mammoth::View
   end
 end

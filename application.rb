@@ -11,8 +11,9 @@ module Mammoth
     configure do
       load_paths << 'app'
 
-      layout :application
       routes 'config/routes'
+
+      layout :application
     end
   end
 end

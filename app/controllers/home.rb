@@ -1,6 +1,6 @@
 module Mammoth::Controllers::Home
   class Index
-    include Lotus::Action
+    include Mammoth::Action
 
     def call(params)
 
