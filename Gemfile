@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'lotusrb'
+gem 'lotusrb', github: 'lotus/lotus'
 gem 'thor'
 gem 'thin'
 
@@ -12,4 +12,6 @@ end
 
 group :development, :test do
   gem 'rspec'
+
+  gem 'pry'
 end
