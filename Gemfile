@@ -2,11 +2,10 @@ source 'https://rubygems.org'
 
 gem 'lotusrb'
 gem 'thor'
+gem 'thin'
 
 group :development do
-  gem 'guard'
-  gem 'guard-shotgun', git: 'https://github.com/rchampourlier/guard-shotgun.git'
-  gem 'guard-rspec'
+  gem 'shotgun'
 end
 
 group :development, :test do
