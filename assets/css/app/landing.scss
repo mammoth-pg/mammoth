@@ -42,3 +42,21 @@ section p {
 
 	color: #a3b7d6;
 }
+
+button {
+	display: block;
+
+	margin: 0 auto;
+	padding: 10px 40px;
+
+	border: none;
+	border-radius: 4px;
+
+	font: {
+		size: 20px;
+		weight: bold;
+	}
+
+	background-color: #36b272;
+	color: #4f5a6b;
+}
