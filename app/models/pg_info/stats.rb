@@ -12,6 +12,10 @@ module PgInfo
       @connection = connection
     end
 
+    def get(options = {})
+      fail "Please override in a subclass"
+    end
+
     def self.connect(connection_string)
       connection = Sequel.connect(connection_string)
       return self.new(connection)
@@ -25,5 +29,18 @@ module PgInfo
       self.connect(TEST_CONNECTION_STRING_LOCAL)
     end
 
+    protected
+
+    def sql(query)
+      @connection.fetch(query).to_a
+    end
+
+    def sql_option(provided_option, default = '')
+      if provided_option
+        @connection.literal(provided_option)
+      else
+        default
+      end
+    end
   end
 end
