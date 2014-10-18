@@ -5,6 +5,7 @@ gem 'thor'
 gem 'thin'
 
 gem 'pg'
+gem 'sequel'
 
 group :development do
   gem 'shotgun'
