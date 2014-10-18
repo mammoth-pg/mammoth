@@ -6,7 +6,7 @@ module PgInfo
     # Example:
     # ::PgInfo::CurrentActivity.test_local.get :order => :query_start, :show_connections => :all
     def get(options = {})
-      order = sql_option(options[:order], 'xact_start')
+      order = sql_option(options[:order], :xact_start)
 
       active_filter = case (options[:show_connections] || :all)
       when :active
