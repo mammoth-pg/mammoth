@@ -26,9 +26,12 @@ h3 {
   font-size: 18px;
   text-align: center; }
 
-section p {
+section p, section ul {
   margin: 30px 10%;
   color: #a3b7d6; }
+
+section p {
+  text-indent: 1em; }
 
 button {
   display: block;
