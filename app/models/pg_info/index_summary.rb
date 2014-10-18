@@ -11,9 +11,9 @@ module PgInfo
                 pg_size_pretty(pg_class.reltuples::bigint) AS rows_in_bytes,
                 pg_class.reltuples AS num_rows,
                 count(indexname) AS number_of_indexes,
-                CASE WHEN x.is_unique = 1 THEN 'Y'
-                                          ELSE 'N'
-                END AS UNIQUE,
+                CASE WHEN x.is_unique = 1 THEN 'Yes'
+                                          ELSE 'No'
+                END AS unique,
                 SUM(CASE WHEN number_of_columns = 1 THEN 1
                                                     ELSE 0
                 END) AS single_column,
