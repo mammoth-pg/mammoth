@@ -9,7 +9,9 @@ module Mammoth::Controllers::PgCreds
     include Lotus::Action::Session
 
     def call(params)
-      if params[:connection_string]
+      if params[:connection_string].blank?
+        session[:db_cred_id] ||= ::PgInfo::PgCreds.generate_new_cred_id
+      else
         connection_string = params[:connection_string]
 
         begin # db URL validation
@@ -22,8 +24,6 @@ module Mammoth::Controllers::PgCreds
         end
 
         session[:db_cred_id] = ::PgInfo::PgCreds.encrypt_creds(params[:connection_string])
-      else
-        session[:db_cred_id] ||= ::PgInfo::PgCreds.generate_new_cred_id
       end
 
       $logger.debug "SESSION db_cred_id = #{session[:db_cred_id]}"
