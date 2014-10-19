@@ -10,6 +10,15 @@ module Mammoth::Controllers::PgExplain
 
       sql_query = params[:sql_query]
 
+      if sql_query.blank?
+        self.body = {
+          error: "Please specify sql_query parameter"
+        }.to_json
+        self.status = 400
+
+        return
+      end
+
       # remove EXPLAIN ANALYZE in case it's already present
       sql_query.gsub! /^EXPLAIN\s+/i, ''
       sql_query.gsub! /^ANALYZE\s+/i, ''
