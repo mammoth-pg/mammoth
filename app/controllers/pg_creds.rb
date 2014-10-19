@@ -9,7 +9,7 @@ module Mammoth::Controllers::PgCreds
     include Lotus::Action::Session
 
     def call(params)
-      if params[:conection_string]
+      if params[:connection_string]
         connection_string = params[:connection_string]
 
         begin # db URL validation
