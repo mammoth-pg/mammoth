@@ -1,4 +1,0 @@
-require(function() {
-  'use strict';
-
-});
