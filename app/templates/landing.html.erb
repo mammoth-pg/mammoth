@@ -13,11 +13,11 @@
         <h3>Mammoth is your one-stop Postgres realtime performance analysis tool.</h3>
     </header>
     <section>
-				<p>Fill the input below with your connection string in format postgres://user:password@server:port/database or leave it empty to generate your own demo database</p>
-				<p>
-					<input type="text" id="connection_string" />
-				</p>
-        <button>Try now!</button>
+				<p>Fill the input below with your connection string or leave it empty to generate your own demo database</p>
+				<form method="post" action="/pg_creds/new">
+					<input type="text" name="connection_string" placeholder="postgres://user:password@server:port/database"/>
+					<input type="submit" value="Try now!" />
+				</form>
         <p>
             Built from the ground up by the team of engineers who have been using Postgres for years, Mammoth is a standalone open source Web application that is both free and easy to use. Designed with simplicity in mind, it helps to reveal performance bottlenecks and other problems that are often notoriously difficult to debug.
         </p>
