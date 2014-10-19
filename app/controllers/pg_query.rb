@@ -10,7 +10,7 @@ module Mammoth::Controllers::PgQuery
 
       sql_query = params[:sql_query]
 
-      stat_conn = connection_for_class(::PgInfo::Stats)
+      stat_conn = connection_for_class(::PgInfo::Stats) or return
 
       self.body = stat_conn.sql(sql_query).to_json
       self.status = 200
