@@ -12,38 +12,7 @@
     </nav>
 </aside>
 
-<div class="bandera" id="analytics">
-    <table id="table" data-type="current_activity">
-        <thead>
-            <tr>
-                <th>datid</th>
-                <th>datname</th>
-                <th>pid</th>
-                <th>usesysid</th>
-                <th>usename</th>
-                <th>client_addr</th>
-                <th>query</th>
-            </tr>
-        </thead>
-        <tbody id="data">
-
-        </tbody>
-    </table>
-</div>
-
-<script id="template" type="text/ractive">
-    {{#each data}}
-        <tr>
-            <td>{{datid}}</td>
-            <td>{{datname}}</td>
-            <td>{{pid}}</td>
-            <td>{{usesysid}}</td>
-            <td>{{usename}}</td>
-            <td>{{client_addr}}</td>
-            <td>{{query}}</td>
-        </tr>
-    {{/each}}
-</script>
+<%= render partial: "analytics/#{type}", locals: { type: type } %>
 
 <script type="text/javascript" src="/js/vendor/require.js"></script>
 <script type="text/javascript" src="/js/require_config.js"></script>

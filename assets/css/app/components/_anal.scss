@@ -1,0 +1,43 @@
+#analytics {
+  table {
+    width: 90%;
+    // $back: #8d939e;
+    // $back: #8ab55b;
+    $back: #5b94b5;
+
+    font-size: 14px;
+
+    border-radius: 4px;
+    border: 2px solid $back;
+    border-collapse: separate;
+    border-spacing: 0;
+
+    thead {
+      background-color: $back;
+
+      th {
+        color: #fff;
+        font-weight: normal;
+      }
+    }
+
+    tbody {
+      tr {
+        color: #4c5057;
+      }
+
+      td {
+        $border-color: desaturate(lighten($back, 26%), 20%);
+
+        border: {
+          right: 1px solid $border-color;
+          bottom: 1px solid $border-color;
+        }
+      }
+    }
+
+    td, th {
+      padding: 5px;
+    }
+  }
+}
