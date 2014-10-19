@@ -22,7 +22,7 @@ module PgInfo
     end
 
     def self.connect(connection_string)
-      connection = Sequel.connect(connection_string, COMMON_CONNECTION_OPTIONS)
+      connection = connection_cache(connection_string)
       return self.new(connection)
     end
 
@@ -35,6 +35,14 @@ module PgInfo
     end
 
     protected
+
+    def self.connection_cache(connection_string)
+      @@connection_cache ||= {}
+      @@connection_cache[connection_string] ||=
+        Sequel.connect(connection_string, COMMON_CONNECTION_OPTIONS)
+
+      return @@connection_cache[connection_string]
+    end
 
     def sql(query)
       @connection.fetch(query).to_a

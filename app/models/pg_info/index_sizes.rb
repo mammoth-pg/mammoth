@@ -1,7 +1,7 @@
 require 'pg_info/stats'
 
 module PgInfo
-  class IndexSize < ::PgInfo::Stats
+  class IndexSizes < ::PgInfo::Stats
     def get(options = {})
       return sql <<-END
         SELECT
