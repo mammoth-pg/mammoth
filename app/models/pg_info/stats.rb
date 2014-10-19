@@ -27,11 +27,11 @@ module PgInfo
     end
 
     def self.test_heroku
-      self.connect(TEST_CONNECTION_STRING_HEROKU)
+      @@test_heroku_connection ||= self.connect(TEST_CONNECTION_STRING_HEROKU)
     end
 
     def self.test_local
-      self.connect(TEST_CONNECTION_STRING_LOCAL)
+      @@test_local_connection ||= self.connect(TEST_CONNECTION_STRING_LOCAL)
     end
 
     protected
