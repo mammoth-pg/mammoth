@@ -36,12 +36,35 @@ module PgInfo
 
     protected
 
+    def self.cleanup_connection_cache!
+      stale_connections = []
+
+      @@connection_cache.each do |connection_string, connection_attrs|
+        if (Time.now.utc - connection_attrs[:last_used_at]) > 5.minutes
+          stale_connections << [connection_string, connection_attrs]
+        end
+      end
+
+      stale_connections.each do |stale_connection|
+        connection_string, connection_attrs = stale_connection
+        $logger.debug "Disconnecting #{connection_string.inspect} after idle period of 5 mins."
+        connection_attrs = @@connection_cache.delete(connection_string)
+        connection_attrs[:connection].disconnect
+      end
+    end
+
     def self.connection_cache(connection_string)
       @@connection_cache ||= {}
-      @@connection_cache[connection_string] ||=
-        Sequel.connect(connection_string, COMMON_CONNECTION_OPTIONS)
+      self.cleanup_connection_cache!
 
-      return @@connection_cache[connection_string]
+      $logger.debug "Connecting to #{connection_string.inspect}."
+      @@connection_cache[connection_string] ||= {
+        :connection => Sequel.connect(connection_string, COMMON_CONNECTION_OPTIONS)
+      }
+
+      @@connection_cache[connection_string][:last_used_at] = Time.now.utc
+
+      return @@connection_cache[connection_string][:connection]
     end
 
     def sql(query)
