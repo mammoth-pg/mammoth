@@ -34,6 +34,29 @@ section {
     text-indent: 1em;
     color: #aebcd4; }
 
+::-webkit-input-placeholder {
+  color: #54ab7e; }
+
+::-moz-placeholder {
+  color: #54ab7e; }
+
+:-ms-input-placeholder {
+  color: #54ab7e; }
+
+::placeholder {
+  color: #54ab7e; }
+
+.connection_string {
+  display: block;
+  margin: 0 auto 20px;
+  width: 500px;
+  padding: 10px;
+  border: 2px solid #6884b0;
+  border-radius: 4px;
+  font-size: 20px;
+  color: #aebcd4;
+  background: #5b687d; }
+
 button {
   display: block;
   margin: 0 auto 30px;
