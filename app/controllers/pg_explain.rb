@@ -20,8 +20,6 @@ module Mammoth::Controllers::PgExplain
 
       result_json = stat_conn.sql(sql_query).first[:"QUERY PLAN"]
 
-      #query_plan = JSON.parse(result_json)
-
       self.body = result_json
       self.status = 200
     rescue Sequel::DatabaseError => e
