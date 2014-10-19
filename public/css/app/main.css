@@ -1592,6 +1592,15 @@ html, body {
 body {
   background-color: #dadae0; }
 
+h1 {
+  margin: 0;
+  position: absolute;
+  top: 3px;
+  left: 15px; }
+  h1 img {
+    width: 105px;
+    height: 26px; }
+
 header[role="main"] {
   background-color: #2e333b;
   padding: 10px; }
