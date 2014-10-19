@@ -21,4 +21,5 @@ end
 
 # FIXME(arp): hopefully Lotus has a better way of loading files...
 $LOAD_PATH.unshift(::Mammoth::Application.configuration.root.join('app', 'models'))
+$LOAD_PATH.unshift(::Mammoth::Application.configuration.root.join('app', 'controllers'))
 $LOAD_PATH.unshift(::Mammoth::Application.configuration.root.join('app', 'layouts'))
