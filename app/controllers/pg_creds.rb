@@ -26,6 +26,8 @@ module Mammoth::Controllers::PgCreds
         session[:db_cred_id] ||= ::PgInfo::PgCreds.generate_new_cred_id
       end
 
+      $logger.debug "SESSION db_cred_id = #{session[:db_cred_id]}"
+
       redirect_to '/analytics'
     end
   end
