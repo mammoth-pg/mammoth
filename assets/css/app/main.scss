@@ -8,6 +8,20 @@ body {
   background-color: #dadae0;
 }
 
+h1 {
+  margin: 0;
+
+  // FIXME(ptico) change this shit later
+  position: absolute;
+  top: 3px;
+  left: 15px;
+
+  img {
+    width: 105px;
+    height: 26px;
+  }
+}
+
 @import "app/layout/header";
 @import "app/layout/sidebar";
 @import "app/layout/main";
