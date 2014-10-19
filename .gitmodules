@@ -1,0 +1,3 @@
+[submodule "assets/js/vendor/ace"]
+	path = assets/js/vendor/ace
+	url = git@github.com:ajaxorg/ace.git
