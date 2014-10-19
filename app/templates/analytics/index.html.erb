@@ -1,1 +1,25 @@
-<h1>Mammonth does anal!</h1>
+<aside role="main">
+    <nav>
+        <ul>
+            <li><a href="/analytics/current_activity">Current activity</a></li>
+            <li><a href="/analytics/current_locks">Current locks</a></li>
+            <li><a href="/analytics/index_bloat">Index bloat</a></li>
+            <li><a href="/analytics/index_dupes">Index dupes</a></li>
+            <li><a href="/analytics/index_sizes">Index sizes</a></li>
+            <li><a href="/analytics/index_summary">Index summary</a></li>
+            <li><a href="/analytics/table_sizes">Table sizes</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<div class="bandera" id="analytics">
+
+</div>
+
+<script type="text/javascript" src="/js/vendor/require.js"></script>
+<script type="text/javascript" src="/js/require_config.js"></script>
+<script type="text/javascript">
+    require(['ractive'], function(Ractive) {
+        console.log(Ractive);
+    });
+</script>
