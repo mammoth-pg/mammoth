@@ -1650,7 +1650,7 @@ aside[role="main"] {
   height: 300px;
   margin-bottom: 20px; }
 
-#query-explain, #query-submit {
+button {
   margin: 0 auto 30px;
   padding: 10px 40px;
   border: none;
@@ -1659,9 +1659,18 @@ aside[role="main"] {
 
 #query-submit {
   background-color: #36b272; }
+  #query-submit:hover {
+    background-color: #51ca8b; }
 
 #query-explain {
   background-color: #5d7194; }
+  #query-explain:hover {
+    background-color: #798bab; }
+
+#clear {
+  background-color: #fa5159; }
+  #clear:hover {
+    background-color: #fb8389; }
 
 #analytics table {
   width: 90%;
