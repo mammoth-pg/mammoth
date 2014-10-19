@@ -22,19 +22,27 @@ module PgInfo
     end
 
     def self.connect(connection_string)
-      connection = Sequel.connect(connection_string, COMMON_CONNECTION_OPTIONS)
+      connection = connection_cache(connection_string)
       return self.new(connection)
     end
 
     def self.test_heroku
-      @@test_heroku_connection ||= self.connect(TEST_CONNECTION_STRING_HEROKU)
+      self.connect(TEST_CONNECTION_STRING_HEROKU)
     end
 
     def self.test_local
-      @@test_local_connection ||= self.connect(TEST_CONNECTION_STRING_LOCAL)
+      self.connect(TEST_CONNECTION_STRING_LOCAL)
     end
 
     protected
+
+    def self.connection_cache(connection_string)
+      @@connection_cache ||= {}
+      @@connection_cache[connection_string] ||=
+        Sequel.connect(connection_string, COMMON_CONNECTION_OPTIONS)
+
+      return @@connection_cache[connection_string]
+    end
 
     def sql(query)
       @connection.fetch(query).to_a
