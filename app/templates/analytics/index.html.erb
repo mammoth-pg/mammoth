@@ -1,13 +1,13 @@
 <aside role="main">
     <nav>
         <ul>
-            <li><a href="/analytics/current_activity">Current activity</a></li>
-            <li><a href="/analytics/current_locks">Current locks</a></li>
-            <li><a href="/analytics/index_bloat">Index bloat</a></li>
-            <li><a href="/analytics/index_dupes">Index dupes</a></li>
-            <li><a href="/analytics/index_sizes">Index sizes</a></li>
-            <li><a href="/analytics/index_summary">Index summary</a></li>
-            <li><a href="/analytics/table_sizes">Table sizes</a></li>
+            <li class="<%= "current" if type == "current_activity" %>"><a href="/analytics/current_activity">Current activity</a></li>
+            <li class="<%= "current" if type == "current_locks" %>"><a href="/analytics/current_locks">Current locks</a></li>
+            <li class="<%= "current" if type == "index_bloat" %>"><a href="/analytics/index_bloat">Index bloat</a></li>
+            <li class="<%= "current" if type == "index_dupes" %>"><a href="/analytics/index_dupes">Index dupes</a></li>
+            <li class="<%= "current" if type == "index_sizes" %>"><a href="/analytics/index_sizes">Index sizes</a></li>
+            <li class="<%= "current" if type == "index_summary" %>"><a href="/analytics/index_summary">Index summary</a></li>
+            <li class="<%= "current" if type == "table_sizes" %>"><a href="/analytics/table_sizes">Table sizes</a></li>
         </ul>
     </nav>
 </aside>

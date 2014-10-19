@@ -13,17 +13,17 @@
             <ul>
                 <li>
                     <a href="/manage">
-                        <i class="fa fa-database"></i>
+                        <i class="fa fa-database <%= 'current' if controller == 'manage' %>"></i>
                     </a>
                 </li>
                 <li>
                     <a href="/analytics">
-                        <i class="fa fa-bar-chart"></i>
+                        <i class="fa fa-bar-chart <%= 'current' if controller == 'analytics' %>"></i>
                     </a>
                 </li>
                 <li>
                     <a href="/query">
-                        <i class="fa fa-terminal"></i>
+                        <i class="fa fa-terminal <%= 'current' if controller == 'query' %>"></i>
                     </a>
                 </li>
             </ul>
