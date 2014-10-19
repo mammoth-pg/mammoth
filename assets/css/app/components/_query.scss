@@ -1,8 +1,51 @@
+.wrapper {
+  width: 80%;
+  margin: 10px auto;
+}
+
 #query-input {
   display: block;
 
-  width: 80%;
   height: 300px;
+  margin-bottom: 20px;
+}
 
-  margin: 10px auto;
+button {
+  margin: 0 auto 30px;
+  padding: 10px 40px;
+
+  border: none;
+  border-radius: 4px;
+
+  color: #fff;
+}
+
+#query-submit {
+  $query-submit-color: #36b272;
+
+  background-color: $query-submit-color;
+
+  &:hover {
+    background-color: lighten($query-submit-color, 10%);
+  }
+}
+
+#query-explain {
+  $query-explain-color: #5d7194;
+
+  background-color: $query-explain-color;
+
+  &:hover {
+    background-color: lighten($query-explain-color, 10%);
+  }
+}
+
+#clear {
+  $query-clear-color: #fa5159;
+
+  background-color: $query-clear-color;
+
+  &:hover {
+    background-color: lighten($query-clear-color, 10%);
+  }
 }
