@@ -23,7 +23,7 @@ module PgInfo
 
       password_option = pg_password && "PGPASSWORD=#{pg_password}"
       psql_command = `which psql`.strip
-      psql_command = ::Mammoth::Application.configuration.root.join("/evilbin/psql").to_s if psql_command.blank?
+      psql_command = ::Mammoth::Application.configuration.root.join("evilbin/psql").to_s if psql_command.blank?
       host_option = pg_host && "-h #{pg_host}"
       user_option = pg_user && "-U #{pg_user}"
       dump_path_option = "-f #{SQL_DUMP_PATH}"
