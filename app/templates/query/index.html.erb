@@ -4,12 +4,9 @@
 
 <div class="bandera" id="query">
     <div class="wrapper">
-        <div name="query" id="query-input">SELECT city, COUNT(id) AS users_count
-FROM users
-WHERE group_name = 'salesman'
-AND created > '2011-05-21'
-GROUP BY 1
-ORDER BY 2 DESC</div>
+        <div name="query" id="query-input">SELECT * FROM countries
+JOIN cities
+ON capital = cities.id</div>
     <button id="query-submit">Run query</button>
     <button id="query-explain">Explain</button>
     <button id="add-snippet">Add snippet</button>

@@ -12,18 +12,18 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/manage">
-                        <i class="fa fa-database <%= 'current' if controller == 'manage' %>"></i>
+                    <a href="/manage" class="<%= 'current' if controller == 'manage' %>">
+                        <i class="fa fa-database"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="/analytics">
-                        <i class="fa fa-bar-chart <%= 'current' if controller == 'analytics' %>"></i>
+                    <a href="/analytics" class="<%= 'current' if controller == 'analytics' %>">
+                        <i class="fa fa-bar-chart"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="/query">
-                        <i class="fa fa-terminal <%= 'current' if controller == 'query' %>"></i>
+                    <a href="/query" class="<%= 'current' if controller == 'query' %>">
+                        <i class="fa fa-terminal"></i>
                     </a>
                 </li>
             </ul>
