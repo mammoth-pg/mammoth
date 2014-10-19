@@ -42,11 +42,11 @@ module PgInfo
 
     def sql_option(provided_options, default = '')
       sanitized_options = if provided_options
-        Array.wrap(provided_options).map { |option|
+        Array(provided_options).map { |option|
           @connection.literal(option)
         }
       else
-        Array.wrap(default)
+        Array(default)
       end
 
       return sanitized_options.join(", ")
