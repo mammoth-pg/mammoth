@@ -1,9 +1,10 @@
 module Mammoth::Controllers::Query
   class Index
     include Mammoth::Action
+    expose :controller
 
     def call(params)
-
+      @controller = 'query'
     end
   end
 
@@ -16,7 +17,7 @@ module Mammoth::Controllers::Query
     # end
 
     def call(params)
-
+      @controller = 'query'
     end
   end
 end
