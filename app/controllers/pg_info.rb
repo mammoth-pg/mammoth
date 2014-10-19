@@ -1,3 +1,7 @@
+require 'lotus/controller'
+require 'lotus/action/session'
+require 'pg_info/pg_creds'
+
 PG_INFO_SUPPORTED_STATS = %w(
   current_activity
   current_locks
@@ -15,6 +19,7 @@ end
 module Mammoth::Controllers::PgInfo
   class Index
     include Mammoth::Action
+    include Lotus::Action::Session
 
     def call(params)
       self.format = :json
@@ -32,7 +37,13 @@ module Mammoth::Controllers::PgInfo
 
       stat_class = PgInfo.const_get(stat_name.camelize)
 
-      connection_string = params[:connection_string]
+      if session[:db_cred_id]
+        connection_string = ::PgInfo::PgCreds.decrypt_creds(session[:db_cred_id])
+      else
+        $logger.debug "Somehow session[:db_cred_id] is empty, redirecting to the root page."
+        session[:error] = "No connection credentials in the current HTTP session. Please re-enter them again."
+        redirect_to '/'
+      end
 
       stat_conn = if connection_string
         stat_class.connect(connection_string)
