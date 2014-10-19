@@ -1641,11 +1641,27 @@ aside[role="main"] {
   padding: 10px;
   overflow: hidden; }
 
+.wrapper {
+  width: 80%;
+  margin: 10px auto; }
+
 #query-input {
   display: block;
-  width: 80%;
   height: 300px;
-  margin: 10px auto; }
+  margin-bottom: 20px; }
+
+#query-explain, #query-submit {
+  margin: 0 auto 30px;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 4px;
+  color: white; }
+
+#query-submit {
+  background-color: #36b272; }
+
+#query-explain {
+  background-color: #5d7194; }
 
 #analytics table {
   width: 90%;

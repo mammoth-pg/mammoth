@@ -3,12 +3,16 @@
 </aside>
 
 <div class="bandera" id="query">
-    <div name="query" id="query-input">SELECT city, COUNT(id) AS users_count
+    <div class="wrapper">
+        <div name="query" id="query-input">SELECT city, COUNT(id) AS users_count
 FROM users
 WHERE group_name = 'salesman'
 AND created > '2011-05-21'
 GROUP BY 1
 ORDER BY 2 DESC</div>
+    <button id="query-submit">Run query</button>
+    <button id="query-explain">Explain</button>
+    </div>
 </div>
 
 <script type="text/javascript" src="/js/vendor/require.js"></script>
