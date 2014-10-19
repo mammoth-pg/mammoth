@@ -6,4 +6,17 @@ module Mammoth::Controllers::Query
 
     end
   end
+
+  class Do
+    include Mammoth::Action
+
+    # params do
+    #   param :query
+    #   param :explain, type: Boolean
+    # end
+
+    def call(params)
+
+    end
+  end
 end

@@ -1,4 +1,4 @@
-require([], function() {
+require(['vendor/ace/ace'], function(Ace) {
   'use strict';
 
 });
