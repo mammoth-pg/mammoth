@@ -9,3 +9,5 @@ get '/pg_info/:stat_name.json', to: 'pg_info#index'
 post '/pg_creds/new', to: 'pg_creds#create'
 get '/pg_query.json', to: 'pg_query#index' # TODO: debugging only, should be removed
 post '/pg_query.json', to: 'pg_query#index'
+get '/pg_explain.json', to: 'pg_explain#index' # TODO: debugging only, should be removed
+post '/pg_explain.json', to: 'pg_explain#index'

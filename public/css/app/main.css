@@ -1639,7 +1639,7 @@ aside[role="main"] {
 
 .bandera {
   padding: 10px;
-  overflow: hidden; }
+  overflow: scroll; }
 
 .wrapper {
   width: 80%;
