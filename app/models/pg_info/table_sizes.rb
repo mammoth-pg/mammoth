@@ -3,7 +3,7 @@ require 'pg_info/stats'
 module PgInfo
   class TableSizes < ::PgInfo::Stats
     def get(options = {})
-      order = sql_option(options[:order], 2)
+      order = sql_option(options[:order], :"pg_relation_size(C.oid)")
       order_direction = sql_option(options[:order_direction], :DESC)
 
       return sql <<-END

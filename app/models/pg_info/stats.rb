@@ -17,6 +17,10 @@ module PgInfo
       @connection = connection
     end
 
+    def sql(query)
+      @connection.fetch(query).to_a
+    end
+
     def get(options = {})
       fail "Please override in a subclass"
     end
@@ -65,10 +69,6 @@ module PgInfo
       @@connection_cache[connection_string][:last_used_at] = Time.now.utc
 
       return @@connection_cache[connection_string][:connection]
-    end
-
-    def sql(query)
-      @connection.fetch(query).to_a
     end
 
     def sql_option(provided_options, default = '')
