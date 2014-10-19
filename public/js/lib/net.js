@@ -160,7 +160,7 @@ define(['lib/promise', 'lib/querystring'], function(Promise, QueryString) {
   function Request(type, url, options) {
     this.type = type.toUpperCase();
     this.path = url;
-    this.data = Object.create(null);
+    this.data = {};
   }
 
   Request.prototype = {

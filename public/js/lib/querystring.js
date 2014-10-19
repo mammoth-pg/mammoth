@@ -202,7 +202,7 @@ define(['lib/util'], function(util) {
       // Recursively visit object
       object: function(k, v) {
         for (var kk in v) {
-          if (Object.prototype.hasOwnProperty.call(v)) {
+          if (Object.prototype.hasOwnProperty.call(v, kk)) {
             // If key present: use form like { "key[nestedkey]": "value" }
             // else - build plain object: { "nestedkey": "value" }
             // Second variant used only in Stringify constructor
