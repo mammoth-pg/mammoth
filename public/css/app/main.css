@@ -1586,8 +1586,11 @@
 .fa-meanpath:before {
   content: "\f20c"; }
 
+html, body {
+  height: 100%; }
+
 body {
-  background-color: #e6e6e6; }
+  background-color: #dadae0; }
 
 header[role="main"] {
   background-color: #2e333b;
@@ -1607,3 +1610,19 @@ header[role="main"] {
       margin-right: 20px; }
     header[role="main"] ul .fa {
       font-size: 24px; }
+
+aside[role="main"] {
+  width: 200px;
+  height: 100%;
+  float: left;
+  background-color: #4f5a6b; }
+
+.bandera {
+  padding: 10px;
+  overflow: hidden; }
+
+#query-input {
+  display: block;
+  width: 80%;
+  height: 300px;
+  margin: 10px auto; }
