@@ -1614,6 +1614,10 @@ header[role="main"] {
       text-decoration: none; }
       header[role="main"] ul a:hover {
         color: #cf330c; }
+      header[role="main"] ul a.current {
+        color: #c47451; }
+        header[role="main"] ul a.current:hover {
+          color: #cf330c; }
     header[role="main"] ul li {
       display: inline-block;
       margin-right: 20px; }
@@ -1629,13 +1633,18 @@ aside[role="main"] {
     padding: 0 0 0 15px;
     list-style: none; }
     aside[role="main"] nav ul li {
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      display: block; }
       aside[role="main"] nav ul li a {
         color: #acb2b8;
         text-decoration: none;
         text-shadow: #38404d 0 -1px; }
         aside[role="main"] nav ul li a:hover {
           color: #36b272; }
+        aside[role="main"] nav ul li a.current {
+          color: #c47451; }
+          aside[role="main"] nav ul li a.current:hover {
+            color: #36b272; }
 
 .bandera {
   padding: 10px;

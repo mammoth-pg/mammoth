@@ -14,6 +14,7 @@ aside[role="main"] {
 
       li {
         margin-bottom: 15px;
+        display: block;
 
         a {
           color: #acb2b8;
@@ -25,6 +26,13 @@ aside[role="main"] {
 
           &:hover {
             color: #36b272;
+          }
+
+          &.current {
+            color: #c47451;
+            &:hover {
+              color: #36b272;
+            }
           }
         }
       }
