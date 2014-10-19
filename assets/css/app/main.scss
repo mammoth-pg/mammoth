@@ -1,7 +1,15 @@
 @import "vendor/font-awesome/font-awesome";
 
+html, body {
+  height: 100%;
+}
+
 body {
-	background-color: #e6e6e6;
+  background-color: #dadae0;
 }
 
 @import "app/layout/header";
+@import "app/layout/sidebar";
+@import "app/layout/main";
+
+@import "app/components/query";
