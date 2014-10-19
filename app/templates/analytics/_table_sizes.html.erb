@@ -1,0 +1,22 @@
+<div class="bandera" id="analytics">
+    <table id="table" data-type="index_summary">
+        <thead>
+            <tr>
+                <th>relation</th>
+                <th>size</th>
+            </tr>
+        </thead>
+        <tbody id="data">
+
+        </tbody>
+    </table>
+</div>
+
+<script id="template" type="text/ractive">
+    {{#each data}}
+        <tr>
+            <td>{{relation}}</td>
+            <td>{{size}}</td>
+        </tr>
+    {{/each}}
+</script>
