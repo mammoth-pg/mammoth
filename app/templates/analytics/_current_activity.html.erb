@@ -2,13 +2,22 @@
     <table id="table" data-type="current_activity">
         <thead>
             <tr>
-                <th>datid</th>
-                <th>datname</th>
-                <th>pid</th>
-                <th>usesysid</th>
-                <th>usename</th>
-                <th>client_addr</th>
-                <th>query</th>
+                <th>Database&nbsp;id</th>
+                <th>Database&nbsp;Name</th>
+                <th>PID</th>
+                <th>User&nbsp;id</th>
+                <th>User&nbsp;name</th>
+                <th>Application&nbsp;Name</th>
+                <th>Client&nbsp;IP</th>
+                <th>Client&nbsp;Hostname</th>
+                <th>Client&nbsp;Port</th>
+                <th>Backend&nbsp;Started</th>
+                <th>Transaction&nbsp;Started</th>
+                <th>Query&nbsp;Started</th>
+                <th>State&nbsp;Changed</th>
+                <th>Waiting</th>
+                <th>State</th>
+                <th>Last&nbsp;Query</th>
             </tr>
         </thead>
         <tbody id="data">
@@ -25,7 +34,16 @@
             <td>{{pid}}</td>
             <td>{{usesysid}}</td>
             <td>{{usename}}</td>
+            <td>{{application_name}}</td>
             <td>{{client_addr}}</td>
+            <td>{{client_hostname}}</td>
+            <td>{{client_port}}</td>
+            <td>{{backend_start}}</td>
+            <td>{{xact_start}}</td>
+            <td>{{query_start}}</td>
+            <td>{{state_change}}</td>
+            <td>{{waiting}}</td>
+            <td>{{state}}</td>
             <td>{{query}}</td>
         </tr>
     {{/each}}
