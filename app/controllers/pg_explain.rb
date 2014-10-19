@@ -1,7 +1,7 @@
 require 'pg_connection'
 
 module Mammoth::Controllers::PgExplain
-  class Index
+  class Create
     include Mammoth::Action
     include Mammoth::PgConnection
 
