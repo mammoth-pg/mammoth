@@ -18,6 +18,13 @@ header[role="main"] {
       &:hover {
         color: #cf330c;
       }
+
+      &.current {
+        color: #c47451;
+        &:hover {
+          color: #cf330c;
+        }
+      }
     }
 
     li {
