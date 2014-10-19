@@ -16,9 +16,9 @@ require(['ractive', 'lib/net'], function(Ractive, net) {
     request.then(function(resp) {
       table.set({data: resp.json});
 
-      // setTimeout(function() {
-      //   getStats();
-      // }, 5000);
+      setTimeout(function() {
+        getStats();
+      }, 10000);
     });
   }
 
