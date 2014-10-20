@@ -2,13 +2,21 @@
     <table id="table" data-type="current_locks">
         <thead>
             <tr>
-                <th>locktype</th>
-                <th>database_name</th>
-                <th>relation_name</th>
-                <th>page</th>
-                <th>pid</th>
-                <th>mode</th>
-                <th>granted</th>
+                <th>Lock&nbsp;Type</th>
+                <th>Database&nbsp;Name</th>
+                <th>Relation&nbsp;Name</th>
+                <th>Page</th>
+                <th>Tuple</th>
+                <th>Virtual&nbsp;Xid</th>
+                <th>Transaction&nbsp;id</th>
+                <th>Schema&nbsp;Name</th>
+                <th>Relation&nbsp;OID</th>
+                <th>Row&nbsp;OID</th>
+                <th>Virtual&nbsp;Transaction</th>
+                <th>PID</th>
+                <th>Mode</th>
+                <th>Granted</th>
+                <th>Fastpath</th>
             </tr>
         </thead>
         <tbody id="data">
@@ -24,9 +32,17 @@
             <td>{{database_name}}</td>
             <td>{{relation_name}}</td>
             <td>{{page}}</td>
+            <td>{{tuple}}</td>
+            <td>{{virtualxid}}</td>
+            <td>{{transactionid}}</td>
+            <td>{{relname}}</td>
+            <td>{{objid}}</td>
+            <td>{{objsubid}}</td>
+            <td>{{virtualtransaction}}</td>
             <td>{{pid}}</td>
             <td>{{mode}}</td>
             <td>{{granted}}</td>
+            <td>{{fastpath}}</td>
         </tr>
     {{/each}}
 </script>
