@@ -6,9 +6,6 @@ module Mammoth::Controllers::PgExplain
     include Mammoth::PgConnection
 
     def call(params)
-      require 'pry'
-      binding.pry
-
       self.format = :json
 
       sql_query = params[:sql_query]

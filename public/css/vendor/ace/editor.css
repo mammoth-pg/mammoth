@@ -21,7 +21,6 @@
 .ace_content {
     position: absolute;
     -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     min-width: 100%;
 }
@@ -164,7 +163,6 @@
     height: 100%;
     width: 100%;
     -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     /* setting pointer-events: auto; on node under the mouse, which changes
         during scroll, will break mouse wheel scrolling in Safari */
@@ -195,7 +193,6 @@
     z-index: 4;
     position: absolute;
     -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-left: 2px solid
 }
@@ -246,13 +243,11 @@
     position: absolute;
     z-index: 4;
     -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 .ace_line .ace_fold {
     -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 
     display: inline-block;
@@ -296,7 +291,6 @@
     position: fixed;
     z-index: 999999;
     -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     cursor: default;
     white-space: pre;
@@ -314,7 +308,6 @@
 
 .ace_fold-widget {
     -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 
     margin: 0 -12px 0 1px;

@@ -161,6 +161,7 @@ define(['lib/promise', 'lib/querystring'], function(Promise, QueryString) {
     this.type = type.toUpperCase();
     this.path = url;
     this.data = {};
+    this.headers = {};
   }
 
   Request.prototype = {
@@ -189,16 +190,16 @@ define(['lib/promise', 'lib/querystring'], function(Promise, QueryString) {
         var xhr  = net.getXhr(),
             path = request.path;
 
-        for (var k in headers) {
-          xhr.setRequestHeader(k, headers[k]);
-        }
-
         if (request.type == 'GET') {
           path = request.path + '?' + data; // FIXME - check if qs exists
           data = null;
         }
 
         xhr.open(request.type, request.path, true);
+
+        for (var k in headers) {
+          xhr.setRequestHeader(k, headers[k]);
+        }
 
         xhr.onload = function(ev) {
           var response = new Response(xhr, request);
